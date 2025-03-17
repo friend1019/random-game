@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: #d4edda;
+    min-height: 100vh;
+    justify-content: center;
+  }
+  
+  .number-box {
+    width: 250px;
+    text-align: center;
+    padding: 40px;
+    border: 2px solid #28a745;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #28a745;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .draw-button {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s ease;
+  }
+  
+  .reset-button{
+    padding: 8px 16px;
+    background-color: #e47f7f;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s ease;
+  }
+  
+  .draw-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  .reset-button:hover{
+    background-color: #c05e5e;
+    transform: scale(1.05);
+  }
+  
+  .draw-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .reset-button:disabled{
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .remaining {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  /* 숫자 등장 시 서서히 나타나고 확대되는 애니메이션 */
+@keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .number-box {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px;
+    animation: fadeInScale 1s ease-out;
+  }
